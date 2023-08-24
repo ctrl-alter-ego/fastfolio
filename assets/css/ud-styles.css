@@ -541,7 +541,8 @@ p {
   display: grid;
   grid-template-columns: 3fr 2fr;
   position: relative;
-  padding-top: 180px;
+  /* padding-top: 180px; */
+  padding: 180px 0 70px 0;
   /* justify-content: center;
   align-items: start; */
 }
@@ -729,16 +730,14 @@ p {
 }
 
 .ud-hero-image {
-  max-width: 845px;
+  /* max-width: 845px; */
   margin: auto;
   text-align: center;
   position: relative;
   z-index: 1;
-}
-
-.ud-hero-image img {
-  max-width: 120%;
-  text-align: center;
+  height: 160px;
+  width: 120%;
+  left: -40px;
 }
 
 .ud-hero-image .shape {

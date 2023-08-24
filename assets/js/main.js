@@ -15,7 +15,7 @@
 
     // === logo change
     if (ud_header.classList.contains("sticky")) {
-      logo.src = "assets/images/logo/fastfol_Purple.svg";
+      logo.src = "assets/images/logo/fastfol_Grey_Colour.svg";
     } else {
       logo.src = "assets/images/logo/fastfol_White.svg";
     }

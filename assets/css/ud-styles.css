@@ -103,7 +103,7 @@ h6 {
 }
 
 h1 {
-  font-size: 64px;
+  font-size: 84px;
 }
 
 h2 {
@@ -134,7 +134,7 @@ ol {
 }
 
 p {
-  font-size: 14px;
+  font-size: 12px;
   font-weight: var(--body-font-weight);
   line-height: 26px;
   color: var(--body-color);
@@ -522,11 +522,7 @@ p {
 .ud-hero {
   background: var(--primary-color);
   background-image: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-  justify-content: center;
-  align-items: flex-start;
-  display: flex;
-  position: relative;
-  padding-top: 180px;
+
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -541,17 +537,24 @@ p {
   }
 }
 
+.grid {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  position: relative;
+  padding-top: 180px;
+  /* justify-content: center;
+  align-items: start; */
+}
+
 .ud-hero-content {
-  max-width: 780px;
-  margin: auto;
-  margin-bottom: 30px;
+  padding: 10% 0 0 0%;
+  position: relative;
 }
 
 .ud-hero-content .ud-hero-title {
   color: var(--white);
   font-weight: var(--title-font-weight);
   line-height: 60px;
-  text-align: center;
   margin-bottom: 30px;
 }
 
@@ -573,11 +576,8 @@ p {
   font-weight: normal;
   font-size: 20px;
   line-height: 35px;
-  text-align: center;
   color: var(--white);
   opacity: 0.8;
-  max-width: 600px;
-  margin: auto;
   margin-bottom: 30px;
 }
 
@@ -588,20 +588,98 @@ p {
   }
 }
 
+/* form */
+
+.form-head {
+  grid-column-gap: 0px;
+  grid-row-gap: 16px;
+  flex-direction: row;
+  grid-template-rows: auto;
+  grid-template-columns: 1.5fr;
+  grid-auto-columns: .25fr;
+  grid-auto-flow: column;
+  align-content: start;
+  justify-content: space-around;
+  align-items: stretch;
+  display: grid;
+}
+
+.input {
+  height: 70px;
+  clear: none;
+  color: #000;
+  background-color: #fff;
+  border-style: none;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  flex: none;
+  margin-bottom: 0;
+  padding-left: 20px;
+  padding-right: 0;
+  transition: box-shadow .3s cubic-bezier(.215, .61, .355, 1);
+  display: inline-block;
+  box-shadow: inset 0 0 #fc0a7e;
+}
+
+.button {
+  color: #fff;
+  text-align: center;
+  border-radius: 3px;
+  margin-right: 0;
+  padding: 20px 40px;
+  font-size: 16px;
+  line-height: 26px;
+  transition: background-color .5s cubic-bezier(.789, .159, .25, 1), color .2s cubic-bezier(.789, .159, .25, 1);
+  display: inline-block;
+  border: 0;
+}
+
+.button.form-button {
+  background-color: var(--primary-color);
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  transition-timing-function: cubic-bezier(.215, .61, .355, 1), cubic-bezier(.215, .61, .355, 1);
+  grid-column-gap: 0px;
+  grid-row-gap: 16px;
+  flex-direction: row;
+  grid-template-rows: auto;
+  grid-template-columns: 1.5fr;
+  grid-auto-columns: .25fr;
+  grid-auto-flow: column;
+  align-content: start;
+  justify-content: space-around;
+  align-items: stretch;
+  display: grid;
+  border: 0;
+}
+
+.button.form-button:hover {
+  color: var(--white);
+  background-color: var(--secondary-color);
+}
+
+.w-form-done {
+  text-align: center;
+  background-color: #ddd;
+  padding: 20px;
+  display: none;
+}
+
+.w-form-fail {
+  background-color: #ffdede;
+  margin-top: 10px;
+  padding: 10px;
+  display: none;
+}
+
 .ud-hero-buttons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
 .ud-hero-buttons .ud-main-btn {
-  margin: 8px;
+  margin: 8px 8px 8px 0;
 }
 
 @media (max-width: 767px) {
@@ -659,7 +737,7 @@ p {
 }
 
 .ud-hero-image img {
-  max-width: 100%;
+  max-width: 120%;
   text-align: center;
 }
 
@@ -698,13 +776,14 @@ p {
 
 .ud-section-title span {
   font-weight: var(--subtitle-font-weight);
-  font-size: 18px;
+  font-size: 14px;
   color: var(--primary-color);
   margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
 }
 
 .ud-section-title h2 {
-  font-size: 42px;
   line-height: 55px;
   text-transform: capitalize;
   color: var(--heading-color);
@@ -712,7 +791,7 @@ p {
 }
 
 .ud-section-title p {
-  font-size: 20px;
+  font-size: 1em;
   line-height: 30px;
 }
 

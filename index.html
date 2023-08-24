@@ -25,18 +25,17 @@
 <meta property="og:url" content="">
 <meta property="og:title" content="">
 <meta property="og:description" content="">
-<meta property="og:image" content="https://uideck.com/wp-content/uploads/2021/09/play-meta-bs.jpg">
+<meta property="og:image" content="assets/images/logo/og.png">
 
 <!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image">
 <meta property="twitter:url" content="">
 <meta property="twitter:title" content="">
 <meta property="twitter:description" content="">
-<meta property="twitter:image" content="https://uideck.com/wp-content/uploads/2021/09/play-meta-bs.jpg">
+<meta property="twitter:image" content="assets/images/logo/og.png">
 
     <!--====== Favicon Icon ======-->
-    <link rel="shortcut icon" href="assets/images/favicon.svg" type="image/svg"
-    />
+    <link rel="shortcut icon" href="assets/images/favicon.svg" type="image/svg" />
 
     <!-- ===== All CSS files ===== -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
@@ -69,12 +68,12 @@
                   <li class="nav-item">
                     <a class="ud-menu-scroll" href="#about">About</a>
                   </li>
-                  <li class="nav-item">
+                  <!-- <li class="nav-item">
                     <a class="ud-menu-scroll" href="#pricing">Pricing</a>
-                  </li>
-                  <li class="nav-item">
+                  </li> -->
+                  <!-- <li class="nav-item">
                     <a class="ud-menu-scroll" href="#team">Team</a>
-                  </li>
+                  </li> -->
                   <li class="nav-item">
                     <a class="ud-menu-scroll" href="#contact">Contact</a>
                   </li>
@@ -120,9 +119,9 @@
               </div>
 
               <div class="navbar-btn d-none d-sm-inline-block">
-                <a href="login.html" class="ud-main-btn ud-login-btn">
+                <!-- <a href="login.html" class="ud-main-btn ud-login-btn">
                   Sign In
-                </a>
+                </a> -->
                 <a class="ud-main-btn ud-white-btn" href="javascript:void(0)">
                   Sign Up
                 </a>
@@ -137,35 +136,50 @@
     <!-- ====== Hero Start ====== -->
     <section class="ud-hero" id="home">
       <div class="container">
-        <div class="row">
-          <div class="col-lg-12">
+        <div class="grid">
+          <!-- <div class="col-lg-12"> -->
             <div class="ud-hero-content wow fadeInUp" data-wow-delay=".2s">
-              <h1 class="ud-hero-title">
-                Work in lightspeed
+              <h1 class="ud-hero-title wow lightSpeedInLeft">
+                Work at lightspeed
               </h1>
               <p class="ud-hero-desc">
                 Supercharge your portfolio management with Fastfol.io
               </p>
               <ul class="ud-hero-buttons">
-                <li>
-                  <!-- TODO register now for beta button -->
-                  <a href="#" rel="nofollow noopener" target="_self" class="ud-main-btn ud-white-btn">
-                    Register your interest
+
+                <div id="" class="form-block w-form">
+                  <form id="email-form" name="email-form" data-name="Email Form" method="get" class="form-head"  aria-label="Email Form">
+                    <input type="email" class="input" maxlength="256" name="email-2" data-name="Email 2" placeholder="Enter your email" id="email-2" required="">
+                      <input type="submit" value="Register interest" data-wait="Please wait..." id="" class="button form-button w-button">
+                    </form>
+                  <div class="w-form-done" tabindex="-1" role="region" aria-label="Email Form success">
+                    <div>Thank you! We'll be in touch soon!</div>
+                  </div>
+                  <div class="w-form-fail" tabindex="-1" role="region" aria-label="Email Form failure">
+                    <div>Something went wrong. Please give it another try.</div>
+                  </div>
+                </div>
+
+
+                <!-- <li>
+                  <a href="#contact" rel="nofollow noopener" target="_self" class="ud-main-btn ud-white-btn">
+                    Register my interest
                   </a>
-                </li>
+                </li> 
                 <li>
                   <a href="#features" rel="nofollow noopener" target="_self" class="ud-main-btn ud-link-btn">
                     Learn More <i class="lni lni-arrow-right"></i>
                   </a>
-                </li>
+                </li>-->
               </ul>
             </div>
             <!-- <div class="ud-hero-brands-wrapper wow fadeInUp" data-wow-delay=".3s">
               <img src="assets/images/hero/brand.svg" alt="brand" />
             </div> -->
             <div class="ud-hero-image wow fadeInUp" data-wow-delay=".25s">
-              <img src="assets/images/hero/hero-image.svg" alt="hero-image" />
-              <img
+              <!-- <img src="assets/images/hero/hero-image.svg" alt="hero-image" /> -->
+              <img src="https://uploads-ssl.webflow.com/64e3789e25b95d161294b605/64e3789e25b95d161294b6af_img-top.png" alt="Product screenshot" />
+              <!-- <img
                 src="assets/images/hero/dotted-shape.svg"
                 alt="shape"
                 class="shape shape-1"
@@ -174,8 +188,8 @@
                 src="assets/images/hero/dotted-shape.svg"
                 alt="shape"
                 class="shape shape-2"
-              />
-            </div>
+              /> -->
+            <!-- </div> -->
           </div>
         </div>
       </div>
@@ -189,7 +203,7 @@
           <div class="col-lg-12">
             <div class="ud-section-title">
               <span id="features">Features</span>
-              <h2>Work in lightspeed</h2>
+              <h2>What we're working on</h2>
               <p>
                 There are many variations of passages of Lorem Ipsum available
                 but the majority have suffered alteration in some form.
@@ -204,9 +218,9 @@
                 <i class="lni lni-gift"></i>
               </div>
               <div class="ud-feature-content">
-                <h3 class="ud-feature-title">Free and Open-Source</h3>
+                <h3 class="ud-feature-title">Feature</h3>
                 <p class="ud-feature-desc">
-                  Lorem Ipsum is simply dummy text of the printing and industry.
+                  Lorem Ipsum is simply dummy text of the feature.
                 </p>
                 <a href="javascript:void(0)" class="ud-feature-link">
                   Learn More
@@ -220,9 +234,9 @@
                 <i class="lni lni-move"></i>
               </div>
               <div class="ud-feature-content">
-                <h3 class="ud-feature-title">Multipurpose Template</h3>
+                <h3 class="ud-feature-title">Feature</h3>
                 <p class="ud-feature-desc">
-                  Lorem Ipsum is simply dummy text of the printing and industry.
+                  Lorem Ipsum is simply dummy text of the feature.
                 </p>
                 <a href="javascript:void(0)" class="ud-feature-link">
                   Learn More
@@ -236,9 +250,9 @@
                 <i class="lni lni-layout"></i>
               </div>
               <div class="ud-feature-content">
-                <h3 class="ud-feature-title">High-quality Design</h3>
+                <h3 class="ud-feature-title">Feature</h3>
                 <p class="ud-feature-desc">
-                  Lorem Ipsum is simply dummy text of the printing and industry.
+                  Lorem Ipsum is simply dummy text of the feature.
                 </p>
                 <a href="javascript:void(0)" class="ud-feature-link">
                   Learn More
@@ -252,9 +266,9 @@
                 <i class="lni lni-layers"></i>
               </div>
               <div class="ud-feature-content">
-                <h3 class="ud-feature-title">All Essential Elements</h3>
+                <h3 class="ud-feature-title">Feature</h3>
                 <p class="ud-feature-desc">
-                  Lorem Ipsum is simply dummy text of the printing and industry.
+                  Lorem Ipsum is simply dummy text of the feature.
                 </p>
                 <a href="javascript:void(0)" class="ud-feature-link">
                   Learn More
@@ -272,20 +286,15 @@
       <div class="container">
         <div class="ud-about-wrapper wow fadeInUp" data-wow-delay=".2s">
           <div class="ud-about-content-wrapper">
-            <div class="ud-about-content">
-              <span class="tag">About Us</span>
-              <h2>Brilliant Toolkit to Build Nextgen Website Faster.</h2>
+            <div class="ud-about-content ud-section-title">
+              <span>About Us</span>
+              <h2>Purpose-built to help you manage your portfolio</h2>
               <p>
-                The main ‘thrust’ is to focus on educating attendees on how to
-                best protect highly vulnerable business applications with
-                interactive panel discussions and roundtables led by subject
-                matter experts.
+                Built from the ground-up to focus on speed and effective management of your innovation or product portfolio.
               </p>
 
               <p>
-                The main ‘thrust’ is to focus on educating attendees on how to
-                best protect highly vulnerable business applications with
-                interactive panel.
+                Built from the ground-up to focus on speed and effective management of your innovation or product portfolio.
               </p>
               <a href="javascript:void(0)" class="ud-main-btn">Learn More</a>
             </div>
@@ -909,13 +918,12 @@
     <section id="contact" class="ud-contact">
       <div class="container">
         <div class="row align-items-center">
-          <div class="col-xl-8 col-lg-7">
+          <div class="col-xl-7 col-lg-6">
             <div class="ud-contact-content-wrapper">
-              <div class="ud-contact-title">
-                <span>CONTACT US</span>
+              <div class="ud-section-title">
+                <span>Contact Us</span>
                 <h2>
-                  Let’s talk about <br />
-                  Love to hear from you!
+                  Get in touch
                 </h2>
               </div>
               <div class="ud-contact-info-wrapper">
@@ -925,7 +933,7 @@
                   </div>
                   <div class="ud-info-meta">
                     <h5>Our Location</h5>
-                    <p>401 Broadway, 24th Floor, Orchard Cloud View, London</p>
+                    <p>Somewhere, Someplace, World.</p>
                   </div>
                 </div>
                 <div class="ud-single-info">
@@ -941,21 +949,11 @@
               </div>
             </div>
           </div>
-          <div class="col-xl-4 col-lg-5">
-            <div
-              class="ud-contact-form-wrapper wow fadeInUp"
-              data-wow-delay=".2s"
-            >
-              <h3 class="ud-contact-form-title">Send us a Message</h3>
+          <div class="col-xl-5 col-lg-4">
+            <div class="ud-contact-form-wrapper wow fadeInUp" data-wow-delay=".2s">
+              <h3 class="ud-contact-form-title">Sign up for early access</h3>
               <form class="ud-contact-form">
-                <div class="ud-form-group">
-                  <label for="fullName">Full Name*</label>
-                  <input
-                    type="text"
-                    name="fullName"
-                    placeholder="Adam Gelius"
-                  />
-                </div>
+                
                 <div class="ud-form-group">
                   <label for="email">Email*</label>
                   <input
@@ -964,25 +962,10 @@
                     placeholder="example@yourmail.com"
                   />
                 </div>
-                <div class="ud-form-group">
-                  <label for="phone">Phone*</label>
-                  <input
-                    type="text"
-                    name="phone"
-                    placeholder="+885 1254 5211 552"
-                  />
-                </div>
-                <div class="ud-form-group">
-                  <label for="message">Message*</label>
-                  <textarea
-                    name="message"
-                    rows="1"
-                    placeholder="type your message here"
-                  ></textarea>
-                </div>
+                
                 <div class="ud-form-group mb-0">
                   <button type="submit" class="ud-main-btn">
-                    Send Message
+                    Register my interest
                   </button>
                 </div>
               </form>
@@ -1013,7 +996,7 @@
                   <img src="assets/images/logo/fastfol_White.svg" alt="logo" />
                 </a>
                 <p class="ud-widget-desc">
-                  Innovate at the Speed of Thought: Elevate Your Portfolio Management with fastfol.io
+                  Innovate at the Speed of Thought: Elevate Your Portfolio Management
                 </p>
                 <!-- <ul class="ud-widget-socials">
                   <li>
@@ -1117,8 +1100,8 @@
                 </ul>
               </div>
             </div>
-            <div class="col-xl-3 col-lg-6 col-md-8 col-sm-10">
-              <!-- <div class="ud-widget">
+           <!-- <div class="col-xl-3 col-lg-6 col-md-8 col-sm-10">
+               <div class="ud-widget">
                 <h5 class="ud-widget-title">Partners</h5>
                 <ul class="ud-widget-brands">
                   <li>
@@ -1194,8 +1177,8 @@
                     </a>
                   </li>
                 </ul>
-              </div> -->
-            </div>
+              </div> 
+            </div>-->
           </div>
         </div>
       </div>

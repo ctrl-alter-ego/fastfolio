@@ -794,8 +794,7 @@ p {
 
 /* ===== Features CSS ===== */
 .ud-features {
-  padding-top: 120px;
-  padding-bottom: 90px;
+  padding: 90px 0;
 }
 
 @media (max-width: 767px) {
@@ -821,7 +820,6 @@ p {
 
 .ud-section-title h2 {
   line-height: 55px;
-  text-transform: capitalize;
   color: var(--heading-color);
   margin-bottom: 20px;
 }
@@ -1018,8 +1016,7 @@ p {
 
 /* ===== Pricing CSS ===== */
 .ud-pricing {
-  padding-top: 120px;
-  padding-bottom: 90px;
+  padding: 90px 0;
 }
 
 @media (max-width: 767px) {

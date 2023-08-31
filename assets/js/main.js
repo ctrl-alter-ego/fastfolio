@@ -17,7 +17,7 @@
     if (ud_header.classList.contains("sticky")) {
       logo.src = "assets/images/logo/fastfol_Grey_Colour.svg";
     } else {
-      logo.src = "assets/images/logo/fastfol_White.svg";
+      logo.src = "assets/images/logo/fastfol_White_yellow.png";
     }
 
     // show or hide the back-top-top button
@@ -93,16 +93,17 @@
 })();
 
 // ======== animate heading - changing word
-const changingWords = ['company', 'innovation', 'product'];
+const changingWords = ['company ', 'innovation ', 'product '];
 const changingWordElement = document.getElementById('changing-word');
 
 let currentIndex = 0;
+let intervalId;
 
 function changeWord() {
   changingWordElement.textContent = changingWords[currentIndex];
   currentIndex = (currentIndex + 1) % changingWords.length;
   
-  if (currentIndex === 5) {
+  if (currentIndex === 0) {
     clearInterval(intervalId); // Stop the interval after one complete cycle
   }
 }
@@ -111,31 +112,18 @@ setTimeout(() => {
   intervalId = setInterval(changeWord, 1000);
 }, 1000);
 
-// typing letter by letter
+// ========== flash input box
 
-// let currentWordIndex = 0;
-// let currentLetterIndex = 0;
-// let intervalId;
+document.addEventListener('DOMContentLoaded', function() {
+  const btn = document.querySelector('.top-btn');
+  const input = document.querySelector('.form-head input[type=email]');
 
-// function typeWord() {
-//   const currentWord = changingWords[currentWordIndex];
-//   const displayedWord = currentWord.substring(0, currentLetterIndex);
-//   changingWordElement.textContent = displayedWord;
+  btn.addEventListener('click', function() {
+    input.classList.add('pulse-yellow');
+    input.focus();
 
-//   currentLetterIndex++;
-
-//   if (currentLetterIndex > currentWord.length) {
-//     clearInterval(intervalId);
-
-//     setTimeout(() => {
-//       currentLetterIndex = 0;
-//       currentWordIndex = (currentWordIndex + 1) % changingWords.length;
-//       intervalId = setInterval(typeWord, 100);
-//     }, 1000); // Pause for 1 second before typing the next word
-//   }
-// }
-
-// // Start typing the first word after a delay
-// setTimeout(() => {
-//   intervalId = setInterval(typeWord, 100);
-// }, 1000);
+    input.addEventListener('animationend', function() {
+      input.classList.remove('pulse-yellow');
+    }, { once: true });
+  });
+});

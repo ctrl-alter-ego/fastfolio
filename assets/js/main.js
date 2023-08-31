@@ -91,3 +91,51 @@
     scrollTo(document.documentElement);
   };
 })();
+
+// ======== animate heading - changing word
+const changingWords = ['company', 'innovation', 'product'];
+const changingWordElement = document.getElementById('changing-word');
+
+let currentIndex = 0;
+
+function changeWord() {
+  changingWordElement.textContent = changingWords[currentIndex];
+  currentIndex = (currentIndex + 1) % changingWords.length;
+  
+  if (currentIndex === 5) {
+    clearInterval(intervalId); // Stop the interval after one complete cycle
+  }
+}
+
+setTimeout(() => {
+  intervalId = setInterval(changeWord, 1000);
+}, 1000);
+
+// typing letter by letter
+
+// let currentWordIndex = 0;
+// let currentLetterIndex = 0;
+// let intervalId;
+
+// function typeWord() {
+//   const currentWord = changingWords[currentWordIndex];
+//   const displayedWord = currentWord.substring(0, currentLetterIndex);
+//   changingWordElement.textContent = displayedWord;
+
+//   currentLetterIndex++;
+
+//   if (currentLetterIndex > currentWord.length) {
+//     clearInterval(intervalId);
+
+//     setTimeout(() => {
+//       currentLetterIndex = 0;
+//       currentWordIndex = (currentWordIndex + 1) % changingWords.length;
+//       intervalId = setInterval(typeWord, 100);
+//     }, 1000); // Pause for 1 second before typing the next word
+//   }
+// }
+
+// // Start typing the first word after a delay
+// setTimeout(() => {
+//   intervalId = setInterval(typeWord, 100);
+// }, 1000);

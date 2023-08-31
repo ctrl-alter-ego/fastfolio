@@ -62,9 +62,6 @@
               <div class="navbar-collapse">
                 <ul id="nav" class="navbar-nav mx-auto">
                   <li class="nav-item">
-                    <a class="ud-menu-scroll" href="#">Home</a>
-                  </li>
-                  <li class="nav-item">
                     <a class="ud-menu-scroll" href="#features">Features</a>
                   </li>
                   <li class="nav-item">
@@ -95,10 +92,11 @@
         <div class="grid">
           <!-- <div class="col-lg-12"> -->
             <div class="ud-hero-content wow fadeInUp" data-wow-delay=".2s">
-              <h1 class="ud-hero-title wow lightSpeedInLeft">
+              <h1 class="ud-hero-title wow lightSpeedInLeft changing-title">
                 <!-- Work at lightspeed -->
-                Supercharge your portfolio
+                Supercharge your <span id="changing-word">product</span> portfolio
               </h1>
+
               <p class="ud-hero-desc">
                 <!-- Supercharge your portfolio management with Fastfol.io -->
                 Be the first to know when we launch
@@ -120,126 +118,18 @@
                     <div>Something went wrong. Please give it another try.</div>
                   </div>
                 </div>
-
-
-                <!-- <li>
-                  <a href="#contact" rel="nofollow noopener" target="_self" class="ud-main-btn ud-white-btn">
-                    Register my interest
-                  </a>
-                </li> 
-                <li>
-                  <a href="#features" rel="nofollow noopener" target="_self" class="ud-main-btn ud-link-btn">
-                    Learn More <i class="lni lni-arrow-right"></i>
-                  </a>
-                </li>-->
-              <!-- </ul> -->
+                <p class="ud-small">
+                  We'll only send you updates - we hate spam too
+                </p>
             </div>
-            <!-- <div class="ud-hero-brands-wrapper wow fadeInUp" data-wow-delay=".3s">
-              <img src="assets/images/hero/brand.svg" alt="brand" />
-            </div> -->
             <div class="ud-hero-image wow fadeInUp" data-wow-delay=".25s">
-              <!-- <img src="assets/images/hero/hero-image.svg" alt="hero-image" /> -->
               <img src="assets/images/hero/feature-image-1.svg" alt="Product screenshot" />
-              <!-- <img
-                src="assets/images/hero/dotted-shape.svg"
-                alt="shape"
-                class="shape shape-1"
-              />
-              <img
-                src="assets/images/hero/dotted-shape.svg"
-                alt="shape"
-                class="shape shape-2"
-              /> -->
-            <!-- </div> -->
+
           </div>
         </div>
       </div>
     </section>
     <!-- ====== Hero End ====== -->
-
-    <!-- ====== Features Start ====== -->
-    <section id="features" class="ud-features">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12">
-            <div class="ud-section-title">
-              <span id="features">Features</span>
-              <h2>Why Fastfol.io?</h2>
-              <p>
-                Built from the ground-up to focus on speed and effective management of your innovation or product portfolio.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-xl-3 col-lg-3 col-sm-6">
-            <div class="ud-single-feature wow fadeInUp" data-wow-delay=".1s">
-              <div class="ud-feature-icon">
-                <i class="lni lni-layout"></i>
-              </div>
-              <div class="ud-feature-content">
-                <h3 class="ud-feature-title">Health & dashboard</h3>
-                <p class="ud-feature-desc">
-                  Monitor your portfolio's pulse effortlessly.
-                </p>
-                <a href="features.html" class="ud-feature-link">
-                  Learn More
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="col-xl-3 col-lg-3 col-sm-6">
-            <div class="ud-single-feature wow fadeInUp" data-wow-delay=".15s">
-              <div class="ud-feature-icon">
-                <i class="lni lni-gift"></i>
-              </div>
-              <div class="ud-feature-content">
-                <h3 class="ud-feature-title">Leo AI</h3>
-                <p class="ud-feature-desc">
-                  Unleash AI-Powered excellence with Leo, your expert Portfolio Assistant.
-                </p>
-                <a href="features.html" class="ud-feature-link">
-                  Learn More
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="col-xl-3 col-lg-3 col-sm-6">
-            <div class="ud-single-feature wow fadeInUp" data-wow-delay=".2s">
-              <div class="ud-feature-icon">
-                <i class="lni lni-move"></i>
-              </div>
-              <div class="ud-feature-content">
-                <h3 class="ud-feature-title">Asynchronous check-ins</h3>
-                <p class="ud-feature-desc">
-                  No more endless meetings. Broadcast strategic goals and portfolio details.
-                </p>
-                <a href="features.html" class="ud-feature-link">
-                  Learn More
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="col-xl-3 col-lg-3 col-sm-6">
-            <div class="ud-single-feature wow fadeInUp" data-wow-delay=".25s">
-              <div class="ud-feature-icon">
-                <i class="lni lni-layers"></i>
-              </div>
-              <div class="ud-feature-content">
-                <h3 class="ud-feature-title">Integrations</h3>
-                <p class="ud-feature-desc">
-                  Seamless connectivity with your favourite tools.
-                </p>
-                <a href="features.html" class="ud-feature-link">
-                  Learn More
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- ====== Features End ====== -->
 
     <!-- ====== About Start ====== -->
     <section id="about" class="ud-about">
@@ -256,7 +146,7 @@
               <p>
                 Our powerful platform offers a unique portfolio health tracker, granting you real-time insights into your portfolio's performance. With stunning visualizations and AI-powered analytics, you'll effortlessly navigate everything from resource allocation to benefits realization.
               </p>
-              <a href="javascript:void(0)" class="ud-main-btn">Learn More</a>
+              <a href="#features" class="ud-main-btn">Learn More</a>
             </div>
           </div>
           <div class="ud-about-image">
@@ -267,172 +157,193 @@
     </section>
     <!-- ====== About End ====== -->
 
-    <!-- ====== FAQ Start ====== -->
-    <!-- <section id="faq" class="ud-faq">
-      <div class="shape">
-        <img src="assets/images/faq/shape.svg" alt="shape" />
-      </div>
+    <!-- ====== Features Start ====== -->
+    <section id="features" class="ud-features">
       <div class="container">
         <div class="row">
           <div class="col-lg-12">
-            <div class="ud-section-title text-center mx-auto">
-              <span>FAQ</span>
-              <h2>Any Questions? Answered</h2>
+            <div class="ud-section-title">
+              <!-- <span id="features">Features</span>
+              <h2>Why Fastfol.io?</h2>
               <p>
-                There are many variations of passages of Lorem Ipsum available
-                but the majority have suffered alteration in some form.
-              </p>
+                Built from the ground-up to focus on speed and effective management of your innovation or product portfolio.
+              </p> -->
             </div>
           </div>
         </div>
-
         <div class="row">
-          <div class="col-lg-6">
-            <div class="ud-single-faq wow fadeInUp" data-wow-delay=".1s">
-              <div class="accordion">
-                <button
-                  class="ud-faq-btn collapsed"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#collapseOne"
-                >
-                  <span class="icon flex-shrink-0">
-                    <i class="lni lni-chevron-down"></i>
-                  </span>
-                  <span>How to use UIdeck?</span>
-                </button>
-                <div id="collapseOne" class="accordion-collapse collapse">
-                  <div class="ud-faq-body">
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
-                    standard dummy text ever since the 1500s, when an unknown
-                    printer took a galley of type and scrambled it to make a
-                    type specimen book.
-                  </div>
-                </div>
+          <div class="col-xl-3 col-lg-3 col-sm-6">
+            <div class="ud-single-feature wow fadeInUp" data-wow-delay=".1s">
+              <div class="ud-feature-icon">
+                <i class="lni lni-layout"></i>
               </div>
-            </div>
-            <div class="ud-single-faq wow fadeInUp" data-wow-delay=".15s">
-              <div class="accordion">
-                <button
-                  class="ud-faq-btn collapsed"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#collapseTwo"
-                >
-                  <span class="icon flex-shrink-0">
-                    <i class="lni lni-chevron-down"></i>
-                  </span>
-                  <span>How to download icons from Lineicons?</span>
-                </button>
-                <div id="collapseTwo" class="accordion-collapse collapse">
-                  <div class="ud-faq-body">
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
-                    standard dummy text ever since the 1500s, when an unknown
-                    printer took a galley of type and scrambled it to make a
-                    type specimen book.
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="ud-single-faq wow fadeInUp" data-wow-delay=".2s">
-              <div class="accordion">
-                <button
-                  class="ud-faq-btn collapsed"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#collapseThree"
-                >
-                  <span class="icon flex-shrink-0">
-                    <i class="lni lni-chevron-down"></i>
-                  </span>
-                  <span>Is GrayGrids part of UIdeck?</span>
-                </button>
-                <div id="collapseThree" class="accordion-collapse collapse">
-                  <div class="ud-faq-body">
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
-                    standard dummy text ever since the 1500s, when an unknown
-                    printer took a galley of type and scrambled it to make a
-                    type specimen book.
-                  </div>
-                </div>
+              <div class="ud-feature-content">
+                <h3 class="ud-feature-title">Health & dashboard</h3>
+                <p class="ud-feature-desc">
+                  Monitor your portfolio's pulse effortlessly.
+                </p>
+                <a href="#feature-1" class="ud-feature-link">
+                  Learn More
+                </a>
               </div>
             </div>
           </div>
-          <div class="col-lg-6">
-            <div class="ud-single-faq wow fadeInUp" data-wow-delay=".1s">
-              <div class="accordion">
-                <button
-                  class="ud-faq-btn collapsed"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#collapseFour"
-                >
-                  <span class="icon flex-shrink-0">
-                    <i class="lni lni-chevron-down"></i>
-                  </span>
-                  <span>Can I use this template for commercial project?</span>
-                </button>
-                <div id="collapseFour" class="accordion-collapse collapse">
-                  <div class="ud-faq-body">
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
-                    standard dummy text ever since the 1500s, when an unknown
-                    printer took a galley of type and scrambled it to make a
-                    type specimen book.
-                  </div>
-                </div>
+          <div class="col-xl-3 col-lg-3 col-sm-6">
+            <div class="ud-single-feature wow fadeInUp" data-wow-delay=".15s">
+              <div class="ud-feature-icon">
+                <i class="lni lni-gift"></i>
+              </div>
+              <div class="ud-feature-content">
+                <h3 class="ud-feature-title">Leo AI</h3>
+                <p class="ud-feature-desc">
+                  Unleash AI-Powered excellence with Leo, your expert Portfolio Assistant.
+                </p>
+                <a href="#feature-2" class="ud-feature-link">
+                  Learn More
+                </a>
               </div>
             </div>
-            <div class="ud-single-faq wow fadeInUp" data-wow-delay=".15s">
-              <div class="accordion">
-                <button
-                  class="ud-faq-btn collapsed"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#collapseFive"
-                >
-                  <span class="icon flex-shrink-0">
-                    <i class="lni lni-chevron-down"></i>
-                  </span>
-                  <span>Do you have plan releasing Play Pro?</span>
-                </button>
-                <div id="collapseFive" class="accordion-collapse collapse">
-                  <div class="ud-faq-body">
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
-                    standard dummy text ever since the 1500s, when an unknown
-                    printer took a galley of type and scrambled it to make a
-                    type specimen book.
-                  </div>
-                </div>
+          </div>
+          <div class="col-xl-3 col-lg-3 col-sm-6">
+            <div class="ud-single-feature wow fadeInUp" data-wow-delay=".2s">
+              <div class="ud-feature-icon">
+                <i class="lni lni-move"></i>
+              </div>
+              <div class="ud-feature-content">
+                <h3 class="ud-feature-title">Asynchronous check-ins</h3>
+                <p class="ud-feature-desc">
+                  No more endless meetings. Broadcast strategic goals and portfolio details.
+                </p>
+                <a href="#feature-3" class="ud-feature-link">
+                  Learn More
+                </a>
               </div>
             </div>
-            <div class="ud-single-faq wow fadeInUp" data-wow-delay=".2s">
-              <div class="accordion">
-                <button
-                  class="ud-faq-btn collapsed"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#collapseSix"
-                >
-                  <span class="icon flex-shrink-0">
-                    <i class="lni lni-chevron-down"></i>
-                  </span>
-                  <span>Where and how to host this template?</span>
-                </button>
-                <div id="collapseSix" class="accordion-collapse collapse">
-                  <div class="ud-faq-body">
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
-                    standard dummy text ever since the 1500s, when an unknown
-                    printer took a galley of type and scrambled it to make a
-                    type specimen book.
-                  </div>
-                </div>
+          </div>
+          <div class="col-xl-3 col-lg-3 col-sm-6">
+            <div class="ud-single-feature wow fadeInUp" data-wow-delay=".25s">
+              <div class="ud-feature-icon">
+                <i class="lni lni-layers"></i>
+              </div>
+              <div class="ud-feature-content">
+                <h3 class="ud-feature-title">Integrations</h3>
+                <p class="ud-feature-desc">
+                  Seamless connectivity with your favourite tools.
+                </p>
+                <a href="#feature-4" class="ud-feature-link">
+                  Learn More
+                </a>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section> -->
-    <!-- ====== FAQ End ====== -->
+    </section>
+    <!-- ====== Features End ====== -->
+
+    <!-- ====== Feature 1 Start ====== -->
+    <section id="about" class="ud-about">
+      <div id="feature-1" class="container">
+        <div class="ud-about-wrapper wow fadeInUp" data-wow-delay=".2s">
+          <div class="ud-about-content-wrapper">
+            <div class="ud-about-content ud-section-title">
+              <span>Features</span>
+              <h2>Health & dashboard</h2>
+              <p>
+                ...              
+              </p>
+
+              <p>
+                ...              
+              </p>
+              <!-- <a href="#contact" class="ud-main-btn">Register my interest</a> -->
+            </div>
+          </div>
+          <div class="ud-about-image">
+            <img src="assets/images/about/about-image.svg" alt="about-image" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ====== Feature 1 End ====== -->
+
+    <!-- ====== Feature 2 Start ====== -->
+    <section id="about" class="ud-about">
+      <div id="feature-2" class="container">
+        <div class="ud-about-wrapper wow fadeInUp" data-wow-delay=".2s">
+          <div class="ud-about-image"> <!-- image first -->
+            <img src="assets/images/about/about-image.svg" alt="about-image" />
+          </div>
+          <div class="ud-about-content-wrapper">
+            <div class="ud-about-content ud-section-title">
+              <span>Features</span>
+              <h2>Leo AI</h2>
+              <p>
+                ...              
+              </p>
+
+              <p>
+                ...              
+              </p>
+              <!-- <a href="#contact" class="ud-main-btn">Register my interest</a> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ====== Feature 2 End ====== -->
+
+    <!-- ====== Feature 3 Start ====== -->
+    <section id="about" class="ud-about">
+      <div id="feature-3" class="container">
+        <div class="ud-about-wrapper wow fadeInUp" data-wow-delay=".2s">
+          <div class="ud-about-content-wrapper">
+            <div class="ud-about-content ud-section-title">
+              <span>Features</span>
+              <h2>Asynchronous check-ins</h2>
+              <p>
+                ...              
+              </p>
+
+              <p>
+                ...              
+              </p>
+              <!-- <a href="#contact" class="ud-main-btn">Register my interest</a> -->
+            </div>
+          </div>
+          <div class="ud-about-image">
+            <img src="assets/images/about/about-image.svg" alt="about-image" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ====== Feature 3 End ====== -->
+
+    <!-- ====== Feature 4 Start ====== -->
+    <section id="about" class="ud-about">
+      <div id="feature-4" class="container">
+        <div class="ud-about-wrapper wow fadeInUp" data-wow-delay=".2s">
+          <div class="ud-about-image"> <!-- image first -->
+            <img src="assets/images/about/about-image.svg" alt="about-image" />
+          </div>
+          <div class="ud-about-content-wrapper">
+            <div class="ud-about-content ud-section-title">
+              <span>Features</span>
+              <h2>Integrations</h2>
+              <p>
+                ...              
+              </p>
+
+              <p>
+                ...              
+              </p>
+              <!-- <a href="#contact" class="ud-main-btn">Register my interest</a> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ====== Feature 4 End ====== -->
 
     <!-- ====== Contact Start ====== -->
     <section id="contact" class="ud-contact">
@@ -469,7 +380,7 @@
             </div>
           </div>
           <div class="col-xl-5 col-lg-4">
-            <div class="ud-contact-form-wrapper wow fadeInUp" data-wow-delay=".2s">
+            <div class="ud-contact-form-wrapper wow fadeInUp square" data-wow-delay=".2s">
               <h3 class="ud-contact-form-title">Sign up for early access</h3>            
               
               <form class="ud-contact-form" id="email-form" name="email-form" data-name="Email Form" aria-label="Email Form" action="https://api.web3forms.com/submit" method="POST">
@@ -530,7 +441,7 @@
                   <a href="javascript:void(0)">Privacy policy</a>
                 </li>
                 <li>
-                  <a href="javascript:void(0)">Support policy</a>
+                  <a href="javascript:void(0)">Cookies</a>
                 </li>
                 <li>
                   <a href="javascript:void(0)">Terms of service</a>
@@ -550,7 +461,7 @@
     <!-- ====== Footer End ====== -->
 
     <!-- ====== Back To Top Start ====== -->
-    <a href="javascript:void(0)" class="back-to-top">
+    <a href="javascript:void(0)" class="back-to-top round">
       <i class="lni lni-chevron-up"> </i>
     </a>
     <!-- ====== Back To Top End ====== -->

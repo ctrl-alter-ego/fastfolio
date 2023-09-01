@@ -986,8 +986,6 @@ p {
 
   .ud-single-feature {
     margin-bottom: 0px;
-    background: #f3f4fe;
-    border-radius: 10px;
     padding: 20px;
   }
 
@@ -1121,8 +1119,14 @@ p {
   background: var(--body-color);
 }
 
-.ud-splash-wrapper h2, .ud-splash-wrapper p {
+.ud-splash-wrapper p {
   color: var(--white);
+}
+
+.ud-splash-wrapper h2 {
+  color: var(--white);
+  font-size: clamp(1rem, -0.875rem + 8.333vw, 4.5rem);
+  line-height: clamp(1rem, -0.875rem + 8.333vw, 4.5rem);
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {

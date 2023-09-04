@@ -634,7 +634,7 @@ p {
 .cursor {
   display: inline-block;
   width: 3px;
-  height: 68px;
+  height: 0.9em;
   background-color: var(--tertiary-color);
   animation: blinkCursor 1s infinite;
   vertical-align: bottom;

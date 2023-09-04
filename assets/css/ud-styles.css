@@ -208,6 +208,11 @@ p {
   width: 80%;
 }
 
+.utility #about .container {
+  top: 0;
+  width: 100%;
+}
+
 @media only screen and (min-width: 576px) and (max-width: 767px) {
   .container {
     padding-left: 20px;
@@ -1519,7 +1524,7 @@ p {
   padding-top: 130px;
   padding-bottom: 80px;
   background: var(--primary-color);
-  background-image: url("../images/banner/banner-bg.svg");
+  /* background-image: url("../images/banner/banner-bg.svg"); */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1656,4 +1661,9 @@ p {
     padding: 10px 20px;
   }
 }
+
+.utility ol li h4 {
+  padding: 10px 0;
+}
+
 /*# sourceMappingURL=ud-styles.css.map */

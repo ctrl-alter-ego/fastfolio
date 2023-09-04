@@ -82,6 +82,10 @@ a {
   display: inline-block;
 }
 
+.lni-volume-mute::before {
+  padding-left: 8px;
+}
+
 audio,
 canvas,
 iframe,
@@ -830,7 +834,7 @@ p {
   background-color: var(--accent-color);
 }
 
-.w-form-done {
+/* .w-form-done {
   text-align: center;
   background-color: #ddd;
   padding: 20px;
@@ -842,7 +846,7 @@ p {
   margin-top: 10px;
   padding: 10px;
   display: none;
-}
+} */
 
 /* splash */
 

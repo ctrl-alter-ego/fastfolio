@@ -40,7 +40,8 @@
     <!-- ===== All CSS files ===== -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
     <link rel="stylesheet" href="assets/css/animate.css" />
-    <link rel="stylesheet" href="assets/css/lineicons.css" />
+    <!-- <link rel="stylesheet" href="assets/css/lineicons.css" /> -->
+    <link rel="stylesheet" href="https://cdn.lineicons.com/4.0/lineicons.css" />
     <link rel="stylesheet" href="assets/css/ud-styles.css" />
   </head>
   <body>
@@ -100,7 +101,7 @@
               </p>
 
                 <div class="form-block w-form">
-                  <form id="email-form" name="email-form" data-name="Email Form" class="form-head"  aria-label="Email Form" action="https://api.web3forms.com/submit" method="POST">
+                  <form id="form" name="email-form" data-name="Email Form" class="form-head"  aria-label="Email Form" action="https://api.web3forms.com/submit" method="POST">
                     <input type="hidden" name="access_key" value="918b5035-2fc0-44db-ad4f-5a3f9602cac9">
                     <input type="email" class="input" maxlength="256" name="email" data-name="Email" placeholder="youremail@organization.com" id="email" required="">
                     <input type="hidden" name="redirect" value="https://beautiful-selkie-411dec.netlify.app/thankyou.html">
@@ -111,12 +112,9 @@
                     </p>
                   </form>
                   <p class="text-base text-center text-gray-400" id="result"></p>
-                  <div class="w-form-done" tabindex="-1" role="region" aria-label="Email Form success">
+                  <!-- <div class="w-form-done" tabindex="-1" role="region" aria-label="Email Form success">
                     <div>Thank you! We'll be in touch soon!</div>
-                  </div>
-                  <div class="w-form-fail" tabindex="-1" role="region" aria-label="Email Form failure">
-                    <div>Something went wrong. Please give it another try.</div>
-                  </div>
+                  </div> -->
                   
                 </div>
                
@@ -148,7 +146,7 @@
           <div class="col-xl-3 col-lg-3 col-sm-6">
             <div class="ud-single-feature wow fadeInUp" data-wow-delay=".1s">
               <div class="ud-feature-icon">
-                <i class="lni lni-layout"></i>
+                <i class="lni lni-question-circle"></i>
               </div>
               <div class="ud-feature-content">
                 <h3 class="ud-feature-title"><a href="#feature-1">Portfolio perplexity</a></h3>
@@ -164,7 +162,7 @@
           <div class="col-xl-3 col-lg-3 col-sm-6">
             <div class="ud-single-feature wow fadeInUp" data-wow-delay=".15s">
               <div class="ud-feature-icon">
-                <i class="lni lni-gift"></i>
+                <i class="lni lni-dollar"></i>
               </div>
               <div class="ud-feature-content">
                 <h3 class="ud-feature-title"><a href="#feature-2">Decision dilemmas</a></h3>
@@ -180,7 +178,7 @@
           <div class="col-xl-3 col-lg-3 col-sm-6">
             <div class="ud-single-feature wow fadeInUp" data-wow-delay=".2s">
               <div class="ud-feature-icon">
-                <i class="lni lni-move"></i>
+                <i class="lni lni-volume-mute"></i>
               </div>
               <div class="ud-feature-content">
                 <h3 class="ud-feature-title"><a href="#feature-3">Noisy notifications</a></h3>
@@ -196,7 +194,7 @@
           <div class="col-xl-3 col-lg-3 col-sm-6">
             <div class="ud-single-feature wow fadeInUp" data-wow-delay=".25s">
               <div class="ud-feature-icon">
-                <i class="lni lni-layers"></i>
+                <i class="lni lni-grid-alt"></i>
               </div>
               <div class="ud-feature-content">
                 <h3 class="ud-feature-title"><a href="#feature-4">Slow and siloed</a></h3>
@@ -500,9 +498,9 @@
 
       window.document.addEventListener("scroll", onScroll);
 
-      // ====== web3forms
+// ====== web3forms
 
-      const form = document.getElementById("form");
+const form = document.getElementById("form");
 const result = document.getElementById("result");
 
 form.addEventListener("submit", function (e) {

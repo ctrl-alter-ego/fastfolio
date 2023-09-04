@@ -148,6 +148,15 @@ p {
   margin: 0px;
 }
 
+.email {
+  color: var(--white);
+}
+
+.email:hover {
+  color: var(--tertiary-color);
+  text-decoration: underline;
+}
+
 .bg_cover {
   background-position: center center;
   background-size: cover;
@@ -657,6 +666,10 @@ p {
   text-align: left;
 }
 
+.ud-small.footer {
+  color: var(--heading-color);
+}
+
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .ud-hero-content .ud-hero-title {
     font-size: 38px;
@@ -1075,6 +1088,10 @@ p {
   transition: all 0.3s ease-out 0s;
 }
 
+.ud-single-feature:hover .ud-feature-title a {
+  color: var(--tertiary-color) !important;
+}
+
 .ud-single-feature .ud-feature-link:hover {
   color: var(--primary-color);
 }
@@ -1083,6 +1100,10 @@ p {
 .ud-about {
   background: var(--white);
   padding: 60px 0;
+}
+
+.ud-about:last-child {
+  padding: 0;
 }
 
 @media (max-width: 767px) {
@@ -1219,7 +1240,7 @@ p {
   top: 0;
   left: 0;
   height: 50%;
-  background: var(--beige);
+  background: var(--white);
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
@@ -1271,7 +1292,7 @@ p {
   display: -ms-flexbox;
   display: flex;
   max-width: 100%;
-  width: 330px;
+  /* width: 330px; */
   margin-bottom: 30px;
 }
 
@@ -1294,9 +1315,9 @@ p {
 }
 
 .ud-contact-form-wrapper {
-  -webkit-box-shadow: 0px 4px 28px rgba(0, 0, 0, 0.05);
-          box-shadow: 0px 4px 28px rgba(0, 0, 0, 0.05);
-  background: var(--white);
+  -webkit-box-shadow: 0px 4px 28px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 4px 28px rgba(0, 0, 0, 0.25);
+  background: var(--beige);
   padding: 60px;
 }
 
@@ -1343,8 +1364,11 @@ p {
   padding: 15px 0;
   border: none;
   outline: none;
-  border-bottom: 1px solid #f1f1f1;
+  border: 1px solid var(--primary-color);
   resize: none;
+  border-radius: 6px;
+  background-color: white;
+  padding: 5px 20px;
 }
 
 .ud-contact-form-wrapper .ud-form-group input:focus,

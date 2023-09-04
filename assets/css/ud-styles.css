@@ -206,8 +206,8 @@ p {
 
 @media (max-width: 767px) {
   .container {
-    padding-left: 40px;
-    padding-right: 40px;
+    /* padding-left: 40px;
+    padding-right: 40px; */
   }
 }
 
@@ -587,6 +587,10 @@ p {
     padding-top: 130px;
     height: auto;
   }
+
+  .changing-title::after {
+    display: block;
+  }
 }
 
 .grid-footer {
@@ -615,7 +619,6 @@ p {
 
 .changing-title::after {
   content: " portfolio";
-  /* white-space: nowrap;  */
 }
 
 #changing-word {
@@ -625,7 +628,7 @@ p {
 
 #changing-word::after {
   content: "\A"; /* Insert a line break */
-  /* white-space: pre; */
+  white-space: pre;
 }
 
 .cursor {
@@ -664,6 +667,7 @@ p {
   color: var(--white);
   opacity: 0.8;
   text-align: left;
+  grid-column: 1 / span 2;
 }
 
 .ud-small.footer {
@@ -712,9 +716,9 @@ p {
 }
 
 .form-block {
-  width: 50%;
+  /* width: 50%; */
   /* display: inline; */
-  margin: 0 auto;
+  /* margin: 0 auto; */
 }
 
 @media (max-width: 767px) {
@@ -733,7 +737,7 @@ p {
   .ud-hero-content {
     padding: 10% 0;
     position: relative;
-    display: grid;
+    /* display: grid; */
     justify-items: center;
   }
 
@@ -775,17 +779,18 @@ p {
 
 .form-head {
   grid-column-gap: 0px;
-  grid-row-gap: 16px;
+  grid-row-gap: 6px;
   flex-direction: row;
   grid-template-rows: auto;
-  grid-template-columns: 1.5fr;
+  grid-template-columns: 2fr 1fr;
   grid-auto-columns: .25fr;
-  grid-auto-flow: column;
+  grid-auto-flow: row;
   align-content: start;
   justify-content: space-around;
   align-items: stretch;
   display: grid;
-  margin-bottom: 5px;
+  max-width: 50%;
+  margin: 0 auto;
 }
 
 .input {
@@ -811,7 +816,7 @@ p {
   text-align: center;
   border-radius: 3px;
   margin-right: 0;
-  padding: 20px 40px;
+  /* padding: 20px 40px; */
   font-size: 16px;
   line-height: 26px;
   transition: background-color .5s cubic-bezier(.789, .159, .25, 1), color .2s cubic-bezier(.789, .159, .25, 1);
@@ -824,17 +829,6 @@ p {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
   transition-timing-function: cubic-bezier(.215, .61, .355, 1), cubic-bezier(.215, .61, .355, 1);
-  grid-column-gap: 0px;
-  grid-row-gap: 16px;
-  flex-direction: row;
-  grid-template-rows: auto;
-  grid-template-columns: 1.5fr;
-  grid-auto-columns: .25fr;
-  grid-auto-flow: column;
-  align-content: start;
-  justify-content: space-around;
-  align-items: stretch;
-  display: grid;
   border: 0;
 }
 
@@ -1246,6 +1240,7 @@ p {
 /* ===== Contact CSS ===== */
 .ud-contact {
   position: relative;
+  padding: 0 20px;
 }
 
 .ud-contact::after {

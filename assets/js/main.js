@@ -109,3 +109,66 @@ document.addEventListener('DOMContentLoaded', function() {
     }, { once: true });
   });
 });
+
+
+// ====== web3forms
+
+const forms = document.querySelectorAll(".form");
+const results = document.querySelectorAll("#result");
+// const emailInput = document.getElementById("email");
+const submitButtons = document.querySelectorAll(".submit-button");
+
+// Loop through each form and add the event listener
+forms.forEach((form, index) => {
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    const formData = new FormData(form);
+
+    const result = results[index];
+    const submitButton = submitButtons[index];
+    
+    var object = {};
+    formData.forEach((value, key) => {
+      object[key] = value;
+    });
+
+    var json = JSON.stringify(object);
+    submitButton.value = "Please wait...";
+
+    fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json"
+      },
+      body: json
+    })
+      .then(async (response) => {
+        let json = await response.json();
+        submitButton.value = "Notify me";
+        if (response.status == 200) {
+            result.innerHTML = "Thank you for signing up for updates! We'll be in touch soon.";
+            result.classList.remove("text-gray-500");
+            result.classList.add("alert-success");
+            // emailInput.style.display = "none"; // Hide email input
+            // submitButton.style.display = "none"; // Hide submit button
+        } else {
+          console.log(response);
+          result.innerHTML = "Sorry, that didn't work. Please try again.";
+          result.classList.remove("text-gray-500");
+          result.classList.add("alert-warning");
+        }
+      })
+      .catch((error) => {
+        console.log(error);
+        result.innerHTML = "Sorry, looks like we're experiencing a temporary issue. Please try again.";
+        result.classList.add("alert-danger")
+      })
+      .then(function () {
+        form.reset();
+        setTimeout(() => {
+          result.style.display = "none";
+        }, 5000);
+      });
+  });
+});

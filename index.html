@@ -90,20 +90,18 @@
               </p>
 
                 <div class="form-block w-form">
-                  <form id="form" name="email-form" data-name="Email Form" class="form-head"  aria-label="Email Form" action="https://api.web3forms.com/submit" method="POST">
+                  <form class="form form-head" id="form" name="email-form" data-name="Email Form" aria-label="Email Form" action="https://api.web3forms.com/submit" method="POST">
                     <input type="hidden" name="access_key" value="918b5035-2fc0-44db-ad4f-5a3f9602cac9">
-                    <input type="email" class="input" maxlength="256" name="email" data-name="Email" placeholder="youremail@organization.com" id="email" required="">
-                    <input type="hidden" name="redirect" value="https://beautiful-selkie-411dec.netlify.app/thankyou.html">
+                    <input type="email" class="input" maxlength="256" name="email" data-name="Email" placeholder="youremail@organization.com" id="email" autocomplete="email" required="">
+                    <!-- <input type="hidden" name="redirect" value="https://beautiful-selkie-411dec.netlify.app/thankyou.html"> -->
                     <input type="hidden" name="from_name" value="Fastfol.io Support">
-                    <input type="submit" value="Notify me" data-wait="Please wait..." id="" class="button form-button w-button">
+                    <input type="submit" id="submit-header" value="Notify me" data-wait="Please wait..." id="" class="button submit-button form-button w-button">
                     <p class="ud-small">
                       We'll only send you updates - we hate spam too.
                     </p>
                   </form>
-                  <p class="text-base text-center text-gray-400" id="result"></p>
-                  <!-- <div class="w-form-done" tabindex="-1" role="region" aria-label="Email Form success">
-                    <div>Thank you! We'll be in touch soon!</div>
-                  </div> -->
+                  
+                  <p class="text-gray-500 " id="result"></p>
                   
                 </div>
                
@@ -339,11 +337,11 @@
             <div class="ud-contact-form-wrapper wow fadeInUp square" data-wow-delay=".2s">
               <h3 class="ud-contact-form-title">Sign up for updates</h3>            
               
-              <form class="ud-contact-form" id="form" name="email-form" data-name="Email Form" aria-label="Email Form" action="https://api.web3forms.com/submit" method="POST">
+              <form class="form ud-contact-form" id="form-footer" name="email-form" data-name="Email Form" aria-label="Email Form" action="https://api.web3forms.com/submit" method="POST">
                 <input type="hidden" name="access_key" value="918b5035-2fc0-44db-ad4f-5a3f9602cac9">
                 <div class="ud-form-group">
                   <!-- <label for="email">Email*</label> -->
-                  <input type="email" class="input" maxlength="256" name="email" data-name="Email" placeholder="youremail@organization.com" id="email" required="">
+                  <input type="email" class="input" maxlength="256" name="email" data-name="Email" placeholder="youremail@organization.com" id="email" autocomplete="email" required="">
                   <input type="hidden" name="from_name" value="Fastfol.io Support">
                   <p class="ud-small footer">
                     We'll only send you updates - we hate spam too.
@@ -352,7 +350,7 @@
                 
                 <div class="ud-form-group mb-0">
 
-                  <button type="submit" class="ud-main-btn" value="Notify me" data-wait="Please wait..." id="">
+                  <button type="submit" class="ud-main-btn submit-button" value="Notify me" data-wait="Please wait..." id="submit-footer">
                     Notify me
                   </button>
                 </div>
@@ -463,53 +461,6 @@
 
       window.document.addEventListener("scroll", onScroll);
 
-// ====== web3forms
-
-const form = document.getElementById("form");
-const result = document.getElementById("result");
-
-form.addEventListener("submit", function (e) {
-  const formData = new FormData(form);
-  e.preventDefault();
-  var object = {};
-  formData.forEach((value, key) => {
-    object[key] = value;
-  });
-  var json = JSON.stringify(object);
-  result.innerHTML = "Please wait...";
-
-  fetch("https://api.web3forms.com/submit", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      Accept: "application/json"
-    },
-    body: json
-  })
-    .then(async (response) => {
-      let json = await response.json();
-      if (response.status == 200) {
-        result.innerHTML = json.message;
-        result.classList.remove("text-gray-500");
-        result.classList.add("text-green-500");
-      } else {
-        console.log(response);
-        result.innerHTML = json.message;
-        result.classList.remove("text-gray-500");
-        result.classList.add("text-red-500");
-      }
-    })
-    .catch((error) => {
-      console.log(error);
-      result.innerHTML = "Sorry, something went wrong! Please try again.";
-    })
-    .then(function () {
-      form.reset();
-      setTimeout(() => {
-        result.style.display = "none";
-      }, 5000);
-    });
-});
 
 // ======== animate heading - changing word
 var changingWords = ['company', 'innovation', 'product', 'project', 'ideas'];

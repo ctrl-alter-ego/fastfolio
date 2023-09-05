@@ -152,6 +152,12 @@ p {
   margin: 0px;
 }
 
+.text-gray-500 {
+  font-size: 16px;
+  color: var(--heading-color);
+  text-align: center;
+}
+
 .email {
   color: var(--white);
 }
@@ -204,7 +210,7 @@ p {
 
 #about .container {
   position: relative;
-  top: -140px;
+  top: -100px;
   width: 80%;
 }
 
@@ -701,6 +707,13 @@ p {
   .form-head {
     max-width: 55%;
   }
+}
+
+#result {
+  font-size: medium;
+  padding: 10px;
+  width: 50%;
+  margin: 10px auto;
 }
 
 .ud-about-image {
@@ -1345,7 +1358,7 @@ p {
 /* ===== Footer CSS ===== */
 .ud-footer {
   background: var(--heading-color);
-  padding-top: 5%;
+  padding-top: 3%;
   position: relative;
   z-index: 1;
   overflow: hidden;

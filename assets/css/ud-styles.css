@@ -67,6 +67,7 @@ i,
 span,
 a {
   display: inline-block;
+  color: var(--primary-color);
 }
 
 .lni-volume-mute::before {
@@ -110,6 +111,7 @@ h2 {
 
 h3 {
   font-size: 28px;
+  margin-bottom: 10px;
 }
 
 h4 {
@@ -1007,7 +1009,6 @@ span.section-title-dark {
   font-weight: var(--title-font-weight);
   font-size: 20px;
   line-height: 28px;
-  margin-bottom: 12px;
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
@@ -1170,7 +1171,7 @@ span.section-title-dark {
 .ud-about-content p {
   font-size: 16px;
   line-height: 28px;
-  margin-bottom: 40px;
+  margin-bottom: 25px;
 }
 
 /* .ud-about-content .ud-main-btn:hover {
@@ -1511,10 +1512,6 @@ span.section-title-dark {
 .ud-footer-bottom-right li {
   display: inline-block;
   padding: 1em;
-}
-
-.ud-footer-bottom .ud-footer-bottom-right a {
-  color: var(--primary-color);
 }
 
 .ud-footer-bottom .ud-footer-bottom-right a:hover {

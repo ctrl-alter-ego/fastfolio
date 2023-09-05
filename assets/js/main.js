@@ -123,7 +123,6 @@ forms.forEach((form, index) => {
   form.addEventListener("submit", function (e) {
     e.preventDefault();
     const formData = new FormData(form);
-
     const result = results[index];
     const submitButton = submitButtons[index];
     

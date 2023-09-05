@@ -581,7 +581,7 @@ p {
   background: var(--primary-color);
   background-image: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
   /* height: 110vh; */
-  padding: 180px 0 70px 0;
+  padding: 180px 0 0px 0;
 }
 
 @media (max-width: 767px) {
@@ -685,6 +685,7 @@ p {
     transition: 0.6s ease all;
     border-radius: 2rem 1rem 1em 2rem;
     width: 65%;
+    padding: 60px 0 30px 0;
   }
 
   .ud-hero-image:hover {
@@ -747,9 +748,9 @@ p {
     text-align: center;
     position: relative;
     z-index: 1;
-    height: 180px;
-    left: -4px;
-    width: 102%;
+    height: 210px;
+    /* left: -4px; */
+    /* width: 102%; */
     overflow: hidden;
   }
   
@@ -864,8 +865,7 @@ p {
 
 .ud-hero-image {
   text-align: center;
-  margin: 8% auto 3%;
-  /* width: 60%; */
+  margin: 0 auto;
 }
 
 .ud-hero-image .shape {

@@ -1,16 +1,3 @@
-/* =======
-
-	Template Name: Play Bootstrap
-	Author: UIdeck
-	Author URI: https://uideck.com/
-	Support: https://github.com/uideck/
-	Version: 1.0
-
-======== */
-/*===========================
-  COMMON css 
-===========================*/
-
 @import url('https://fonts.googleapis.com/css2?family=Dai+Banna+SIL:wght@600&family=Open+Sans:wght@400;700&display=swap');
 :root {
   --title-font: 'Dai Banna SIL', serif;
@@ -863,20 +850,6 @@ p {
   color: var(--white);
   background-color: var(--accent-color);
 }
-
-/* .w-form-done {
-  text-align: center;
-  background-color: #ddd;
-  padding: 20px;
-  display: none;
-}
-
-.w-form-fail {
-  background-color: #ffdede;
-  margin-top: 10px;
-  padding: 10px;
-  display: none;
-} */
 
 /* splash */
 

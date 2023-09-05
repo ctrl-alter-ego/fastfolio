@@ -907,8 +907,13 @@ p {
   letter-spacing: 0.2em;
 }
 
-.ud-splash .ud-section-title span {
+span.section-title-dark {
   color: var(--tertiary-color);
+  font-weight: var(--subtitle-font-weight);
+  font-size: 14px;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
 }
 
 .ud-section-title h2 {

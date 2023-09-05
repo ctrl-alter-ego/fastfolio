@@ -1186,7 +1186,7 @@ p {
 /* ===== Contact CSS ===== */
 .ud-contact {
   position: relative;
-  padding: 0 20px;
+  /* padding: 0 20px; */
 }
 
 .ud-contact::after {
@@ -1289,7 +1289,7 @@ p {
 @media (max-width: 767px) {
   .ud-contact-form-wrapper {
     padding: 40px 30px;
-    margin: -40px -40px 20px;
+    margin: -40px -12px 20px -12px;
   }
 }
 

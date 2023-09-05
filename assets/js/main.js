@@ -151,6 +151,7 @@ forms.forEach((form, index) => {
             result.innerHTML = "Thank you for signing up for updates! We'll be in touch soon.";
             result.classList.remove("text-gray-500");
             result.classList.add("alert-success");
+            posthog.capture('User signed up');
             // emailInput.style.display = "none"; // Hide email input
             // submitButton.style.display = "none"; // Hide submit button
         } else {

@@ -115,7 +115,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 const forms = document.querySelectorAll(".form");
 const results = document.querySelectorAll("#result");
-// const emailInput = document.getElementById("email");
+const spamMessages = document.querySelectorAll(".ud-small");
 const submitButtons = document.querySelectorAll(".submit-button");
 
 // Loop through each form and add the event listener
@@ -125,6 +125,7 @@ forms.forEach((form, index) => {
     const formData = new FormData(form);
     const result = results[index];
     const submitButton = submitButtons[index];
+    const spamMessage = spamMessages[index];
     
     var object = {};
     formData.forEach((value, key) => {
@@ -143,8 +144,9 @@ forms.forEach((form, index) => {
       body: json
     })
       .then(async (response) => {
-        let json = await response.json();
+        //let json = await response.json();
         submitButton.value = "Notify me";
+        spamMessage.style.display = "none";
         if (response.status == 200) {
             result.innerHTML = "Thank you for signing up for updates! We'll be in touch soon.";
             result.classList.remove("text-gray-500");
@@ -167,6 +169,7 @@ forms.forEach((form, index) => {
         form.reset();
         setTimeout(() => {
           result.style.display = "none";
+          spamMessage.style.display = "inline-block";
         }, 5000);
       });
   });

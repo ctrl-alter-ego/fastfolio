@@ -1,2 +1,4 @@
-/*
-  Content-Security-Policy: default-src 'self' https://cdn.lineicons.com https://fonts.googleapis.com https://web3forms.com/client/script.js; script-src 'self';
+script-src 'strict-dynamic' 'nonce-husifds8s9oserbisenves9se979o34hn3lf' 'unsafe-inline' http: https:;
+object-src 'none';
+base-uri 'none';
+require-trusted-types-for 'script';

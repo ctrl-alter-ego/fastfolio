@@ -9,6 +9,7 @@
   --body-color: #212121;
   --heading-color: #212121;
   --primary-color: #a477ba;
+  --access-color: #8b659e;
   --accent-color: #5f4270;
   --secondary-color: #350e47;
   --tertiary-color: #faff00;
@@ -505,7 +506,7 @@ p {
 }
 
 .navbar-btn .ud-white-btn {
-  background: #8b659e; 
+  background: var(--access-color); /* override to meet accessibility */ 
 }
 
 .navbar-btn .ud-white-btn:hover {
@@ -541,7 +542,7 @@ p {
 }
 
 .sticky .navbar-btn .ud-white-btn {
-  background: var(--primary-color);
+  background: var(--access-color);
   color: var(--white);
 }
 
@@ -841,7 +842,7 @@ p {
 }
 
 .button.form-button {
-  background-color: #8b659e; /* override to meet accessibility */
+  background-color: var(--access-color); /* override to meet accessibility */
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
   transition-timing-function: cubic-bezier(.215, .61, .355, 1), cubic-bezier(.215, .61, .355, 1);
@@ -903,7 +904,7 @@ p {
 .ud-section-title span {
   font-weight: var(--subtitle-font-weight);
   font-size: 14px;
-  color: var(--primary-color);
+  color: var(--access-color);
   margin-bottom: 30px;
   text-transform: uppercase;
   letter-spacing: 0.2em;

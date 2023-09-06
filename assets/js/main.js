@@ -15,9 +15,9 @@
 
     // === logo change
     if (ud_header.classList.contains("sticky")) {
-      logo.src = "assets/images/logo/fastfol_Grey_Colour.svg";
+      logo.src = "assets/images/logo/fastfolio-grey-color.webp";
     } else {
-      logo.src = "assets/images/logo/fastfol_White_yellow.png";
+      logo.src = "assets/images/logo/fastfolio-white-yellow2.webp";
     }
 
     // show or hide the back-top-top button

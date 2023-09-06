@@ -926,7 +926,7 @@ span.section-title-dark {
 
 @media (max-width: 992px) {
   .ud-contact .ud-section-title h2,
-  .ud-contact-info-wrapper .ud-info-meta h5,
+  .ud-contact-info-wrapper .ud-info-meta h3,
   .ud-contact-info-wrapper .ud-info-meta p {
     color: var(--heading-color) !important;
   }
@@ -1271,7 +1271,7 @@ span.section-title-dark {
   margin-right: 24px;
 }
 
-.ud-contact-info-wrapper .ud-info-meta h5 {
+.ud-contact-info-wrapper .ud-info-meta h3 {
   font-size: 18px;
   margin-bottom: 15px;
   color: var(--beige);

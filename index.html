@@ -38,7 +38,6 @@
     <script>
       // Get the protocol from the URL
       const protocol = window.location.protocol;
-      console.log(protocol);
 
       // Check if the script is running over HTTPS
       if (protocol === 'https:') {
@@ -107,7 +106,7 @@
                 <div class="form-block w-form">
                     <form class="form form-head" id="form" name="email-form" data-name="Email Form" aria-label="Email Form" action="https://api.web3forms.com/submit" method="POST">
                       <input type="hidden" name="access_key" value="f45f7163-e24e-4c62-8b89-4753ec755edc">
-                      <input type="email" class="input" maxlength="256" name="email" data-name="Email" placeholder="youremail@organization.com" id="email" autocomplete="email" required="">
+                      <input type="email" class="input" id="email-head" maxlength="256" name="email" data-name="Email" placeholder="youremail@organization.com" autocomplete="email" required="">
                       <!-- <input type="hidden" name="redirect" value="https://beautiful-selkie-411dec.netlify.app/thankyou.html"> -->
                       <input type="hidden" name="from_name" value="Fastfol.io Support">
                       <input type="submit" id="submit-header" value="Notify me" data-wait="Please wait..." class="button submit-button form-button w-button">
@@ -354,7 +353,7 @@
                 <input type="hidden" name="access_key" value="f45f7163-e24e-4c62-8b89-4753ec755edc">
                 <div class="ud-form-group">
                   <!-- <label for="email">Email*</label> -->
-                  <input type="email" class="input" maxlength="256" name="email" data-name="Email" placeholder="youremail@organization.com" id="email" autocomplete="email" required="">
+                  <input type="email" class="input" id="email-footer" maxlength="256" name="email" data-name="Email" placeholder="youremail@organization.com"  autocomplete="email" required="">
                   <input type="hidden" name="from_name" value="Fastfol.io Support">
                   <p class="ud-small footer">
                     We'll only send you updates - we hate spam too.

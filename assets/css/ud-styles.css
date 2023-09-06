@@ -841,7 +841,7 @@ p {
 }
 
 .button.form-button {
-  background-color: var(--primary-color);
+  background-color: #8b659e; /* override to meet accessibility */
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
   transition-timing-function: cubic-bezier(.215, .61, .355, 1), cubic-bezier(.215, .61, .355, 1);

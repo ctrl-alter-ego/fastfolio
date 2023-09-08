@@ -38,6 +38,20 @@
 
     <!-- posthog -->
     <script>
+     function generateUserID() {
+          return 'user_' + Math.random().toString(36).substr(2, 9);
+        }
+
+        function getUserID() {
+          let userID = localStorage.getItem('userID');
+          if (!userID) {
+              userID = generateUserID();
+              localStorage.setItem('userID', userID);
+          }
+          return userID;
+        }
+
+        const userID = getUserID();
       // Get the protocol from the URL
       const protocol = window.location.protocol;
 

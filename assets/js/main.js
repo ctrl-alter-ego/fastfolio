@@ -99,15 +99,25 @@
 document.addEventListener('DOMContentLoaded', function() {
   const btn = document.querySelector('.top-btn');
   const input = document.querySelector('.form-head input[type=email]');
+  const inputFooter = document.querySelector('.ud-contact-form input[type=email]');
+  const contact = document.getElementById('contact');
 
   btn.addEventListener('click', function() {
-    input.classList.add('pulse-yellow');
-    input.focus();
+    if (document.body.classList.contains('index') && (document.documentElement.scrollTop < 1300) ) {
+      console.log("conditions true");
+      input.classList.add('pulse-yellow');
+      input.focus();
 
-    input.addEventListener('animationend', function() {
-      input.classList.remove('pulse-yellow');
-    }, { once: true });
-  });
+      input.addEventListener('animationend', function() {
+        input.classList.remove('pulse-yellow');
+      }, { once: true });
+
+      } else {
+          console.log("conditions not true");
+          scrollTo(document.documentElement, contact.offsetTop);
+          inputFooter.focus();
+      }
+    });
 });
 
 

@@ -183,3 +183,21 @@ forms.forEach((form, index) => {
       });
   });
 });
+
+// ========= PostHog
+
+function generateUserID() {
+  // Generate a unique ID (you might use a library for this)
+  return 'user_' + Math.random().toString(36).substr(2, 9);
+}
+
+function getUserID() {
+  let userID = localStorage.getItem('userID');
+  if (!userID) {
+      userID = generateUserID();
+      localStorage.setItem('userID', userID);
+  }
+  return userID;
+}
+
+const userID = getUserID();

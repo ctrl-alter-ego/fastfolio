@@ -162,8 +162,6 @@ forms.forEach((form, index) => {
             posthog.capture('User signed up');
             // emailInput.style.display = "none"; // Hide email input
             // submitButton.style.display = "none"; // Hide submit button
-            let info = object.email;
-          console.log(info);
 
         } else {
           console.log(response);

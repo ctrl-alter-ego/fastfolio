@@ -152,7 +152,7 @@ forms.forEach((form, index) => {
       body: json
     })
       .then(async (response) => {
-        //let json = await response.json();
+        let json = await response.json();
         submitButton.value = "Notify me";
         spamMessage.style.display = "none";
         if (response.status == 200) {
@@ -162,6 +162,9 @@ forms.forEach((form, index) => {
             posthog.capture('User signed up');
             // emailInput.style.display = "none"; // Hide email input
             // submitButton.style.display = "none"; // Hide submit button
+            let info = object.email;
+          console.log(info);
+
         } else {
           console.log(response);
           result.innerHTML = "Sorry, that didn't work. Please try again.";

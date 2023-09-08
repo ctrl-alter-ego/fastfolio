@@ -35,7 +35,6 @@
     <link rel="stylesheet" href="assets/css/ud-styles.css" />
 
 
-    <!-- posthog -->
     <script>
       function generateUserID() {
            return 'user_' + Math.random().toString(36).substr(2, 9);
@@ -51,6 +50,16 @@
          }
  
          const userID = getUserID();
+
+         function saveInfo() {
+          let info = '';
+
+          if (object.email) {
+            info = object.email;
+            console.log(info);
+          }
+        }
+        
        // Get the protocol from the URL
        const protocol = window.location.protocol;
  
@@ -60,7 +69,7 @@
          posthog.init('phc_d7vkJSsoh0jHzpfmhTzqYIjuM2FXIwdG9m8DmIf9P1W', {
            api_host:'https://eu.posthog.com',
            loaded: function (posthog) {
-             posthog.identify(userID)
+             posthog.identify(userID, { email: info });
          },
        })
      }

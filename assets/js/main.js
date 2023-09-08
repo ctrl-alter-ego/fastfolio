@@ -104,7 +104,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
   btn.addEventListener('click', function() {
     if (document.body.classList.contains('index') && (document.documentElement.scrollTop < 1300) ) {
-      console.log("conditions true");
       input.classList.add('pulse-yellow');
       input.focus();
 
@@ -113,7 +112,6 @@ document.addEventListener('DOMContentLoaded', function() {
       }, { once: true });
 
       } else {
-          console.log("conditions not true");
           scrollTo(document.documentElement, contact.offsetTop);
           inputFooter.focus();
       }

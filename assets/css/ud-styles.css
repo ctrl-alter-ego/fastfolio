@@ -111,6 +111,10 @@ h2 {
   font-size: 36px;
 }
 
+.ud-page-banner h2 {
+  color: var(--white);
+}
+
 h3 {
   font-size: 28px;
   margin-bottom: 10px;
@@ -133,6 +137,18 @@ ol {
   margin: 0px;
   padding: 0px;
   list-style-type: none;
+}
+
+ul.square li {
+  font-size: 16px;
+  line-height: 34px;
+}
+
+ul.square li:before {
+  content: "\25A0";
+  font-size: 20px;
+  color: var(--tertiary-color);
+  margin: 0 10px 0 0px;
 }
 
 p {
@@ -1289,6 +1305,7 @@ span.section-title-dark {
   box-shadow: 0px 4px 28px rgba(0, 0, 0, 0.25);
   background: var(--beige);
   padding: 60px;
+  margin-top: -20px;
 }
 
 @media (max-width: 767px) {

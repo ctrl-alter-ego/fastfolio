@@ -1139,11 +1139,11 @@ span.section-title-dark {
     max-width: 80%;
   }
 
-  #feature-1, #feature-2 img, #feature-3, #feature-4 img {
+  #feature-2, #feature-1 img, #feature-4, #feature-3 img {
     left: 0px;
   }
   
-  #feature-1 img, #feature-2, #feature-3 img, #feature-4 {
+  #feature-2 img, #feature-1, #feature-4 img, #feature-3 {
     right: 0px;
   }
 }

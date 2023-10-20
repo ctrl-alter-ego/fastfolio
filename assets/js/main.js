@@ -99,15 +99,23 @@
 document.addEventListener('DOMContentLoaded', function() {
   const btn = document.querySelector('.top-btn');
   const input = document.querySelector('.form-head input[type=email]');
+  const inputFooter = document.querySelector('.ud-contact-form input[type=email]');
+  const contact = document.getElementById('contact');
 
   btn.addEventListener('click', function() {
-    input.classList.add('pulse-yellow');
-    input.focus();
+    if (document.body.classList.contains('index') && (document.documentElement.scrollTop < 1300) ) {
+      input.classList.add('pulse-yellow');
+      input.focus();
 
-    input.addEventListener('animationend', function() {
-      input.classList.remove('pulse-yellow');
-    }, { once: true });
-  });
+      input.addEventListener('animationend', function() {
+        input.classList.remove('pulse-yellow');
+      }, { once: true });
+
+      } else {
+          scrollTo(document.documentElement, contact.offsetTop);
+          inputFooter.focus();
+      }
+    });
 });
 
 
@@ -144,7 +152,7 @@ forms.forEach((form, index) => {
       body: json
     })
       .then(async (response) => {
-        //let json = await response.json();
+        let json = await response.json();
         submitButton.value = "Notify me";
         spamMessage.style.display = "none";
         if (response.status == 200) {
@@ -154,6 +162,7 @@ forms.forEach((form, index) => {
             posthog.capture('User signed up');
             // emailInput.style.display = "none"; // Hide email input
             // submitButton.style.display = "none"; // Hide submit button
+
         } else {
           console.log(response);
           result.innerHTML = "Sorry, that didn't work. Please try again.";
@@ -175,3 +184,4 @@ forms.forEach((form, index) => {
       });
   });
 });
+

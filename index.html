@@ -15,17 +15,17 @@
 <meta property="og:url" content="https://fastfol.io">
 <meta property="og:title" content="fastfol.io">
 <meta property="og:description" content="Portfolio management for project, product and innovation managers">
-<meta property="og:image" content="assets/images/logo/fastfol_Facebook.png">
+<meta property="og:image" content="https://beautiful-selkie-411dec.netlify.app/assets/images/logo/fastfol_Facebook.png">
 
 <!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image">
 <meta property="twitter:url" content="https://fastfol.io">
 <meta property="twitter:title" content="fastfol.io">
 <meta property="twitter:description" content="Portfolio management for project, product and innovation managers">
-<meta property="twitter:image" content="assets/images/logo/fastfol_Twitter.png">
+<meta property="twitter:image" content="https://beautiful-selkie-411dec.netlify.app/assets/images/logo/fastfol_Twitter.png">
 
     <!--====== Favicon Icon ======-->
-    <link rel="shortcut icon" href="assets/images/favicon.svg" type="image/svg" />
+    <link rel="shortcut icon" href="assets/images/logo/favicon.png" type="image/png" />
 
     <!-- ===== All CSS files ===== -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
@@ -38,18 +38,37 @@
 
     <!-- posthog -->
     <script>
+     function generateUserID() {
+          return 'user_' + Math.random().toString(36).substr(2, 9);
+        }
+
+        function getUserID() {
+          let userID = localStorage.getItem('userID');
+          if (!userID) {
+              userID = generateUserID();
+              localStorage.setItem('userID', userID);
+          }
+          return userID;
+        }
+
+        const userID = getUserID();
+
       // Get the protocol from the URL
       const protocol = window.location.protocol;
 
-      // Check if the script is running over HTTPS
-      if (protocol === 'https:') {
-        !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags getFeatureFlag getFeatureFlagPayload reloadFeatureFlags group updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures getActiveMatchingSurveys getSurveys".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
-        posthog.init('phc_d7vkJSsoh0jHzpfmhTzqYIjuM2FXIwdG9m8DmIf9P1W',{api_host:'https://eu.posthog.com'})
-      }
-      posthog.identify();
+       // Check if the script is running over HTTPS
+       if (protocol === 'https:') {
+         !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags getFeatureFlag getFeatureFlagPayload reloadFeatureFlags group updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures getActiveMatchingSurveys getSurveys".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+         posthog.init('phc_d7vkJSsoh0jHzpfmhTzqYIjuM2FXIwdG9m8DmIf9P1W', {
+           api_host:'https://eu.posthog.com',
+           loaded: function (posthog) {
+             posthog.identify(userID);
+         },
+       })
+     }     
     </script>
   </head>
-  <body>
+  <body class="index">
     <!-- ====== Header Start ====== -->
     <header class="ud-header">
       <div class="container">
@@ -68,7 +87,7 @@
               <div class="navbar-collapse">
                 <ul id="nav" class="navbar-nav mx-auto">
                   <li class="nav-item">
-                    <a class="ud-menu-scroll" href="#why">Why Fastfol.io</a>
+                    <a class="ud-menu-scroll" href="#why">Why fastfol.io</a>
                   </li>
                   <li class="nav-item">
                     <a class="ud-menu-scroll" href="#feature-1">Features</a>
@@ -182,9 +201,9 @@
                 <i class="lni lni-volume-mute"></i>
               </div>
               <div class="ud-feature-content">
-                <h3 class="ud-feature-title"><a href="#feature-3">Noisy notifications</a></h3>
+                <h3 class="ud-feature-title"><a href="#feature-3">Change chaos</a></h3>
                 <p class="ud-feature-desc">
-                  Constant notifications making it difficult to prioritize work and see updates amidst the noise?
+                  Finding it frustrating to keep on top of changes in an environment of constant flux?
                 </p>
                 <a href="#feature-3" class="ud-feature-link">
                   Help me fix this
@@ -219,15 +238,41 @@
 <!-- ====== Splash End ====== -->
 
     <!-- ====== Feature 1 Start ====== -->
+
     <section id="about" class="ud-about">
-      <div id="feature-1" class="container">
+      <div id="feature-1" class="container img-left">
+        <div class="ud-about-wrapper wow fadeInUp" data-wow-delay=".2s">
+          <div class="ud-about-image"> <!-- image first -->
+            <img src="assets/images/hero/lio.webp" alt="An image of a digital lion - your AI assistant: Lio" />
+          </div>
+          <div class="ud-about-content-wrapper">
+            <div class="ud-about-content ud-section-title">
+              <span>Feature</span>
+              <h2>AI-Powered</h2>
+                <p>Efficiently manage your portfolio with Lio, your AI-Powered assistant.</p>
+                <p>⚠️ <strong>Identify Risks:</strong> Lio flags potential risks, empowering you to take timely action.</p>
+                <p>🧩 <strong>Resource Optimization:</strong> Lio dynamically allocates resources for the ideal project mix.</p>
+                <p>🎯 <strong>Strategic Recommendations:</strong> Suggested portfolio compositions based on investment, expected outcomes, and realization timelines.</p>
+                <p>🔮 <strong>External Insights:</strong> Observe external factors and their impact on your project landscape.</p>
+
+              <!-- <a href="#contact" class="ud-main-btn">Register my interest</a> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ====== Feature 1 End ====== -->
+
+    <!-- ====== Feature 2 Start ====== -->
+    <section id="about" class="ud-about">
+      <div id="feature-2" class="container">
           <!-- <span class="section-title-dark">The Solution</span> -->
         <div class="ud-about-wrapper wow fadeInUp" data-wow-delay=".2s">
           <div class="ud-about-content-wrapper">
             <div class="ud-about-content ud-section-title">
               <span>Feature</span>
-              <h2>Health & dashboard</h2>
-                <p>🔍 <strong>Quick Insights:</strong> Monitor your innovation, project or product portfolio's at a glance.</p>
+              <h2>Portfolio Health</h2>
+                <p>🔍 <strong>Quick Insights:</strong> Monitor your innovation, project or product portfolio's at a glance with dashboards.</p>
                 <p>📊 <strong>Visual Excellence:</strong> Simplify complex data, and turn it into actionable insights.</p>
                 <p>🌐 <strong>Sharing:</strong> Share key insights effortlessly. Ensure stakeholders have the right information, enabling effective collaboration and decision-making.</p>
 
@@ -240,37 +285,15 @@
         </div>
       </div>
     </section>
-    <!-- ====== Feature 1 End ====== -->
-
-    <!-- ====== Feature 2 Start ====== -->
-    <section id="about" class="ud-about">
-      <div id="feature-2" class="container img-left">
-        <div class="ud-about-wrapper wow fadeInUp" data-wow-delay=".2s">
-          <div class="ud-about-image"> <!-- image first -->
-            <img src="assets/images/hero/lio.webp" alt="An image of a digital lion - your AI assistant: Lio" />
-          </div>
-          <div class="ud-about-content-wrapper">
-            <div class="ud-about-content ud-section-title">
-              <span>Feature</span>
-              <h2>Lio AI</h2>
-                <p>Fast-track your portfolio management with Lio, your AI-Powered assistant.</p>
-                <p>⚠️ <strong>Identify Risks:</strong> Lio flags potential risks, empowering you to take timely action.</p>
-                <p>🧩 <strong>Resource Optimization:</strong> Lio dynamically allocates resources for the ideal project mix.</p>
-                <p>🎯 <strong>Strategic Recommendations:</strong> Suggested portfolio compositions based on investment, expected outcomes, and realization timelines.</p>
-                <p>🔮 <strong>External Insights:</strong> Observe external factors and their impact on your project landscape.</p>
-
-              <!-- <a href="#contact" class="ud-main-btn">Register my interest</a> -->
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
     <!-- ====== Feature 2 End ====== -->
 
     <!-- ====== Feature 3 Start ====== -->
     <section id="about" class="ud-about">
-      <div id="feature-3" class="container">
+      <div id="feature-3" class="container img-left">
         <div class="ud-about-wrapper wow fadeInUp" data-wow-delay=".2s">
+          <div class="ud-about-image">
+            <img src="assets/images/hero/notify.webp" alt="An image representing collaboration in fastfol.io" />
+          </div>
           <div class="ud-about-content-wrapper">
             <div class="ud-about-content ud-section-title">
               <span>Feature</span>
@@ -282,9 +305,6 @@
               <!-- <a href="#contact" class="ud-main-btn">Register my interest</a> -->
             </div>
           </div>
-          <div class="ud-about-image">
-            <img src="assets/images/hero/notify.webp" alt="An image representing collaboration in fastfol.io" />
-          </div>
         </div>
       </div>
     </section>
@@ -292,11 +312,8 @@
 
     <!-- ====== Feature 4 Start ====== -->
     <section id="about" class="ud-about">
-      <div id="feature-4" class="container img-left">
+      <div id="feature-4" class="container">
         <div class="ud-about-wrapper wow fadeInUp" data-wow-delay=".2s">
-          <div class="ud-about-image"> <!-- image first -->
-            <img src="assets/images/hero/integrations.webp" alt="An image representing integrations in fastfol.io" />
-          </div>
           <div class="ud-about-content-wrapper">
             <div class="ud-about-content ud-section-title">
               <span>Feature</span>
@@ -308,10 +325,34 @@
               <!-- <a href="#contact" class="ud-main-btn">Register my interest</a> -->
             </div>
           </div>
+          <div class="ud-about-image"> <!-- image first -->
+            <img src="assets/images/hero/integrations.webp" alt="An image representing integrations in fastfol.io" />
+          </div>
         </div>
       </div>
     </section>
     <!-- ====== Feature 4 End ====== -->
+
+    <!-- ====== About us Start ====== -->
+    <section class="ud-page-banner">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 wow fadeInUp">
+              <h2>Supercharge your portfolio management with fastfol.io</h2>
+                <ul class="square">               
+                  <li class="wow fadeInUp" data-wow-delay=".15s">Set-out your strategy and identify your gaps</li>
+                  
+                  <li class="wow fadeInUp" data-wow-delay=".2s">Plan your initiatives to create your optimal portfolio</li>
+                  
+                  <li class="wow fadeInUp" data-wow-delay=".25s">Execute and track benefits, risk, financials and resources</li>
+                  
+                  <li class="wow fadeInUp" data-wow-delay=".3s">Sit back and let fastfol.io analyse change and recommend actions.</li>
+                </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ======  About us End ====== -->
 
     <!-- ====== Contact Start ====== -->
     <section id="contact" class="ud-contact">
@@ -527,9 +568,7 @@ function Delete() {
 setTimeout(() => {
   _INTERVAL_VAL = setInterval(Type, 100);
 }, 2000);
-      
-
-    </script>
+</script>
 
  </body>
 </html>

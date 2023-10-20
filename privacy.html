@@ -25,7 +25,7 @@
 <meta property="twitter:image" content="assets/images/logo/fastfol_Twitter.png">
 
     <!--====== Favicon Icon ======-->
-    <link rel="shortcut icon" href="assets/images/favicon.svg" type="image/svg" />
+    <link rel="shortcut icon" href="assets/images/logo/favicon.png" type="image/png" />
 
     <!-- ===== All CSS files ===== -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
@@ -34,17 +34,38 @@
 <noscript><link rel="stylesheet" href="https://cdn.lineicons.com/4.0/lineicons.css"></noscript>
     <link rel="stylesheet" href="assets/css/ud-styles.css" />
 
-    <!-- posthog -->
-    <script>
-      // Get the protocol from the URL
-      const protocol = window.location.protocol;
 
-      // Check if the script is running over HTTPS
-      if (protocol === 'https:') {
-        !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags getFeatureFlag getFeatureFlagPayload reloadFeatureFlags group updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures getActiveMatchingSurveys getSurveys".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
-        posthog.init('phc_d7vkJSsoh0jHzpfmhTzqYIjuM2FXIwdG9m8DmIf9P1W',{api_host:'https://eu.posthog.com'})
-      }    
-    </script>
+     <!-- posthog -->
+     <script>
+      function generateUserID() {
+           return 'user_' + Math.random().toString(36).substr(2, 9);
+         }
+ 
+         function getUserID() {
+           let userID = localStorage.getItem('userID');
+           if (!userID) {
+               userID = generateUserID();
+               localStorage.setItem('userID', userID);
+           }
+           return userID;
+         }
+ 
+         const userID = getUserID();
+ 
+       // Get the protocol from the URL
+       const protocol = window.location.protocol;
+ 
+       // Check if the script is running over HTTPS
+       if (protocol === 'https:') {
+         !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags getFeatureFlag getFeatureFlagPayload reloadFeatureFlags group updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures getActiveMatchingSurveys getSurveys".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+         posthog.init('phc_d7vkJSsoh0jHzpfmhTzqYIjuM2FXIwdG9m8DmIf9P1W', {
+           api_host:'https://eu.posthog.com',
+           loaded: function (posthog) {
+             posthog.identify(userID);
+         },
+       })
+     }     
+     </script>
   </head>
   <body class="utility">
     <!-- ====== Header Start ====== -->
@@ -205,7 +226,7 @@
                     <i class="lni lni-envelope"></i>
                   </div>
                   <div class="ud-info-meta">
-                    <h5>Any ideas, suggestions or comments?</h5>
+                    <h3>Any ideas, suggestions or comments?</h3>
                     <p><a class="email" href="mailto:hello@fastfol.io">hello@fastfol.io</a></p>
                   </div>
                 </div>
